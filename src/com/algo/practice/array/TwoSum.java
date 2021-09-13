@@ -1,7 +1,8 @@
 package com.algo.practice.array;
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class TwoSum {
 
@@ -9,16 +10,23 @@ public class TwoSum {
 		int[] nums = { 3, 5, 1 };
 		int target = 6;
 		print(twoSum(nums, target)); //1 2
+		print(twoSumWithResult(nums, target));
+		System.out.println();
 		
 		int[] nums2 = {3,2,4};
 		print(twoSum(nums2, target)); //1 2
+		print(twoSumWithResult(nums2, target));
+		System.out.println();
 		
 		int[] nums3 = {3,3};
 		print(twoSum(nums3, target)); //0 1
+		print(twoSumWithResult(nums3, target));
+		System.out.println();
 		
 		int[] nums4 = {2,7,11,15};
 		int target4 = 9;
 		print(twoSum(nums4, target4)); //0 1
+		print(twoSumWithResult(nums4, target4));
 	}
 	
 	public static int[] solution2(int[] nums, int target) {
@@ -74,6 +82,18 @@ public class TwoSum {
 			map.put(nums[i], i);
 		}
 		
+		throw new IllegalArgumentException("No Solution!");
+	}
+	
+	public static int[] twoSumWithResult(int[] nums,int target) {
+		Set<Integer> set = new HashSet<>();
+		for(int i : nums) {
+			int complement = target - i;
+			if(set.contains(complement)) {
+				return new int[] {i, complement};
+			}
+			set.add(i);
+		}
 		throw new IllegalArgumentException("No Solution!");
 	}
 	

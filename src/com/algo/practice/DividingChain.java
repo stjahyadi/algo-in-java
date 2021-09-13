@@ -47,7 +47,7 @@ public class DividingChain {
 	 * for input arguments). Elements of input arrays can be modified.
 	 */
 	public static void main(String[] args) {
-		int[] A = { 5, 2, 46, 3, 7 }; // function must return 5
+		int[] A = { 5, 2, 4, 6, 3, 7 }; // function must return 5
 		System.out.println(solution(A));
 	}
 
@@ -58,6 +58,7 @@ public class DividingChain {
 		int min = Integer.MAX_VALUE;
 		for (int i = 1; i < A.length - 3; i++) {
 			for (int j = i + 2; j < A.length - 1; j++) {
+				System.out.println(A[i]+","+A[j]);
 				min = Math.min((A[i] + A[j]), min);
 			}
 		}
