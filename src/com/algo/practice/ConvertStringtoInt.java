@@ -16,7 +16,7 @@ public class ConvertStringtoInt {
 			result *= -1;
 		System.out.println(result);
 	}
-
+	
 	public static void main(String[] args) {
 		convertStringToInteger();
 	}

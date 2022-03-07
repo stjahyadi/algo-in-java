@@ -9,21 +9,22 @@ public class TwoSum {
 	public static void main(String[] args) {
 		int[] nums = { 3, 5, 1 };
 		int target = 6;
+		print(solution2(nums, target)); //1 2
 		print(twoSum(nums, target)); //1 2
 		print(twoSumWithResult(nums, target));
 		System.out.println();
 		
-		int[] nums2 = {3,2,4};
+		int[] nums2 = { 3, 2, 4 };
 		print(twoSum(nums2, target)); //1 2
 		print(twoSumWithResult(nums2, target));
 		System.out.println();
 		
-		int[] nums3 = {3,3};
+		int[] nums3 = { 3, 3 };
 		print(twoSum(nums3, target)); //0 1
 		print(twoSumWithResult(nums3, target));
 		System.out.println();
 		
-		int[] nums4 = {2,7,11,15};
+		int[] nums4 = { 2, 7, 11, 15 };
 		int target4 = 9;
 		print(twoSum(nums4, target4)); //0 1
 		print(twoSumWithResult(nums4, target4));

@@ -2,13 +2,14 @@ package com.algo.practice.module.string;
 
 public class IntToRoman {
 	public static void main(String[] args) {
-		System.out.println(intToRoman(3)); // III
-		System.out.println(intToRoman(4)); // IV
-		System.out.println(intToRoman(9)); // IX
-		System.out.println(intToRoman(40)); // IX
-		System.out.println(intToRoman(48)); // XLVIII
-		System.out.println(intToRoman(58)); // LVIII
-		System.out.println(intToRoman(1994)); // MCMXCIV
+//		System.out.println(intToRoman(3)); // III
+//		System.out.println(intToRoman(4)); // IV
+		System.out.println(intToRoman(7)); // VII
+//		System.out.println(intToRoman(9)); // IX
+//		System.out.println(intToRoman(40)); // IX
+//		System.out.println(intToRoman(48)); // XLVIII
+//		System.out.println(intToRoman(58)); // LVIII
+//		System.out.println(intToRoman(1994)); // MCMXCIV
 	}
 
 	public static String intToRoman(int num) {

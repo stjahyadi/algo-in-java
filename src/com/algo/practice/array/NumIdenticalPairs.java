@@ -1,17 +1,33 @@
 package com.algo.practice.array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+/*https://leetcode.com/problems/number-of-good-pairs/*/
 public class NumIdenticalPairs {
 	public static void main(String[] args) {
-		int[] nums = { 1, 2, 3, 1, 1, 3 };
-		System.out.println(numIdenticalPairs(nums)); // Expected output: 4
+		int[] nums = { 1, 2, 3, 1, 1, 3, 1 };
+		System.out.println(numIdenticalPairs2(nums)); // Expected output: 4
 
 		int[] nums2 = { 1, 1, 1, 1 };
-		System.out.println(numIdenticalPairs(nums2)); // Expected output: 6
+		System.out.println(numIdenticalPairs2(nums2)); // Expected output: 6
 
 		int[] nums3 = { 1, 2, 3 };
-		System.out.println(numIdenticalPairs(nums3)); // Expected output: 0
+		System.out.println(numIdenticalPairs2(nums3)); // Expected output: 0
+	}
+	
+	public static int numIdenticalPairs2(int[]nums) {
+		Map<Integer, Integer> map = new HashMap<>();
+		for(int num: nums) {
+			map.put(num, map.getOrDefault(num, 0)+1);
+		}
+		
+		int count = 0;
+		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			count += entry.getValue() * (entry.getValue() - 1) / 2;
+		}
+		return count;
 	}
 
 	public static int numIdenticalPairs(int[] nums) {

@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class ReturnTotalStringPalindrome {
 	public static void main(String[] args) {
-		List<String> strs = new ArrayList<String>(Arrays.asList("Taco", "cat", "Borrow", "or", "rob", "!Abv"));
+		List<String> strs = new ArrayList<String>(Arrays.asList("Taco", "cat", "Borrow", "or", "rob", "!Abv", "ocaT"));
 		System.out.println(solution(strs));
 		System.out.println(fasterSolution(strs));
 	}

@@ -22,7 +22,7 @@ public class RemoveDuplicateSortedArray {
 	public static void print(int[] nums, int end) {
 		for (int i = 0; i < end; i++) {
 			System.out.print(nums[i]);
-			if (i < nums.length - 1)
+			if (i < end - 1)
 				System.out.print(",");
 		}
 	}

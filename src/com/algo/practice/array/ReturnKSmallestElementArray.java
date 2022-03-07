@@ -8,6 +8,7 @@ public class ReturnKSmallestElementArray {
 		int[] nums = { 4, 4, 2, 1, 6, 2 };
 		int k = 2;
 		System.out.println(quickSelect(nums, 0, nums.length - 1, k)); // 2
+		System.out.println(solution(nums, k)); // 2
 	}
 
 	public static int solution(int[] nums, int k) {

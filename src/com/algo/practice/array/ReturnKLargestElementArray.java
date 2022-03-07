@@ -16,6 +16,7 @@ public class ReturnKLargestElementArray {
 		System.out.println(quickSelect(nums2, 0, nums2.length - 1, k2)); // Output 4
 		
 		System.out.println(solution3(nums2, k2));
+		System.out.println(solution2(nums2, k2));
 		
 	}
 
